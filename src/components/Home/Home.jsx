@@ -3,8 +3,22 @@ import Header from '../Header/Header';
 import './Home.css'
 import Lottie from 'lottie-react'
 import ani from '../../assets/lotti.json'
+import ToyCard from '../ToyCard/ToyCard';
 
 const Home = () => {
+
+    const toyPhoto = [
+        "https://i.ibb.co/0nQBygj/71-I8-DVMEao-L.jpg",
+        "https://i.ibb.co/bWX1gds/71p-Dz-MQtj4-S-AC-SL1500.jpg",
+        "https://i.ibb.co/x5BDTGt/1-32-die-cast-metal-cars-pullback-toy-mini-cooper-metal-car-for-original-imafqgrfm2j3fhka.webp",
+        "https://i.ibb.co/zJJZfrF/1c56e2d1f14675a0ca5e94b6d4370143.jpg",
+        "https://i.ibb.co/s6XrHn3/71z-Lklxq-ZSL-SX466-500x500.jpg",
+        "https://i.ibb.co/RQCVvGr/1-32-Toy-Car-Mini-Police-Metal-Toy-Alloy-Super-Car-Diecasts-Toy-Vehicles-Car-Model.jpg",
+        "https://i.ibb.co/vszWNS1/WH1101-PR-HS.png",
+        "https://i.ibb.co/jMgPNvC/158079367-max.jpg",
+        "https://i.ibb.co/9rQj8MY/blacks-tobbi-kid-cars-th17t0638-c3-600.jpg"
+    ]
+
     return (
         <>
 
@@ -14,7 +28,7 @@ const Home = () => {
                 <div className='w-full text-center '>
                     <h1 className='text-7xl max-[571px]:pt-8 text-bold tracking-wider mb-5  -mt-20'>Toys and Games</h1>
                     <p>
-                    The concepts of games and toys have a very important role in childrens lives. It contributes to the development of cognitive, motor, psychosocial, emotional, and linguistic skills. It also plays a key role in raising self-confident, creative, and happy children. Therefore, attention should be paid to the concepts of games and toys, which are so important for the child to be a part of society as a healthy individual at every stage of his development. 
+                        The concepts of games and toys have a very important role in childrens lives. It contributes to the development of cognitive, motor, psychosocial, emotional, and linguistic skills. It also plays a key role in raising self-confident, creative, and happy children. Therefore, attention should be paid to the concepts of games and toys, which are so important for the child to be a part of society as a healthy individual at every stage of his development.
                     </p>
                 </div>
 
@@ -28,18 +42,25 @@ const Home = () => {
 
             {/* main section */}
 
-            {/* <div className='chef-container'>
+            <div className='px-7'>
 
-                <h1 className='text-5xl chef-title font-bold opacity-60'>Top 6 Master Chef of Bangladesh</h1>
+                <h1 className='text-5xl  text-center mt-14 font-bold opacity-70'>Toy Gallery</h1>
 
-                <div className='grid mt-16 lg:grid-cols-3 gap-14 justify-center items-center'>
+                <div className='grid mt-16 w-11/12 mx-auto lg:grid-cols-3 gap-5 justify-between  items-center'>
 
                     {
-                        chef.map(c => <Chef key={c.id} c={c}></Chef>)
+                        toyPhoto.map((photo, index) => <ToyCard key={index + 1} photo={photo}></ToyCard>)
                     }
 
                 </div>
-            </div> */}
+            </div>
+
+
+            {/* tab section */}
+
+            <div className='my-10'>
+
+            </div>
 
 
             {/* popular item section */}
