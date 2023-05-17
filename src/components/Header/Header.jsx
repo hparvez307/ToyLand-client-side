@@ -1,32 +1,76 @@
 import React from 'react';
 import { NavLink, Link } from "react-router-dom";
+import './header.css';
 
 const Header = () => {
     return (
-        <div className='flex flex-col gap-6  max-[571px]:mb-32 md:flex-row  items-center justify-between my-10 '>
+        <div className="navbar py-10  px-6  header rounded">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><NavLink to="/" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>Home</span></NavLink></li>
 
-        <h1 className='text-5xl  font-extrabold tracking-wider'>Toy<span className='' >Land</span></h1>
+                        <li>
+                            <NavLink to="/alltoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>All Toys</span></NavLink>
 
-        <div className=' flex gap-3 items-center'>
-            <NavLink to="/" className={({ isActive }) => isActive ? "bg-yellow-500 rounded" : ""} ><span className='px-3 font-bold text-2xl'>Home</span></NavLink>
+                        </li>
 
-            <NavLink to="/blog" className={({ isActive }) => isActive ? "bg-yellow-500 rounded" : ""} ><span className='px-3 font-bold text-2xl'>Blog</span></NavLink>
+                        <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>My Toys</span></NavLink>
+                        </li>
+
+                        <li> <NavLink to="/addatoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>Add A Toy</span></NavLink>
+                        </li>
+
+                        <li><NavLink to="/blog" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>Blog</span></NavLink>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <img className='h-14' src="logo.png" alt="" />
+
+                <NavLink to="/" ><h1 className='text-4xl  font-extrabold tracking-wider'>Toy<span className='' >Land</span></h1></NavLink>
+
+            </div>
 
 
-            {
-                 <img  className='h-16 w-16 rounded-full'
-                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" /> 
-            }
 
 
-           
-                    <Link to='/login' className='font-bold text-2xl'>Login</Link>
+
+
+
+
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    <li><NavLink to="/" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>Home</span></NavLink></li>
+
+                    <li>
+                        <NavLink to="/alltoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>All Toys</span></NavLink>
+
+                    </li>
+
+                    <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>My Toys</span></NavLink>
+                    </li>
+
+                    <li> <NavLink to="/addatoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>Add A Toy</span></NavLink>
+                    </li>
+
+                    <li><NavLink to="/blog" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-xl'>Blog</span></NavLink>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
             
+            <div className="navbar-end">
+                <a className="btn">Login</a>
+            </div>
         </div>
-
-
-
-    </div>
     );
 };
 
