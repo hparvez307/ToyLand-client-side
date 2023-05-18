@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import MyToysRow from './MyToysRow';
 
 const MyToys = () => {
     const {user} = useContext(AuthContext);
@@ -16,9 +17,36 @@ const MyToys = () => {
     },[])
     return (
         <div>
-            
+           <div className="overflow-x-auto">
+  <table className="table  w-11/12 mx-auto my-10">
+    <thead>
+      <tr >
+        
+        <th>Seller Name</th> 
+        <th>Toy Name</th> 
+        <th>Sub-Category</th> 
+        <th>Price</th> 
+        <th >Available Quantity</th> 
+        <th className='pl-14'>Action</th>
+      </tr>
+    </thead> 
+    <tbody>
+      
+     
+   
+    {
+        myToys.map((toy, index) => <MyToysRow toy={toy} key={index+1}></MyToysRow>)
+    }
+   
+   
+    
+   
+    </tbody> 
+  
+  </table>
         </div>
-    );
-};
+        </div>
+    
+)};
 
 export default MyToys;
