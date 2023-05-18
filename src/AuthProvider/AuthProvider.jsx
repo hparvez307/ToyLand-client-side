@@ -8,7 +8,7 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
 
-
+  
     const googleProvider = new GoogleAuthProvider();
 
 

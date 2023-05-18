@@ -6,7 +6,7 @@ const FavToys = () => {
 
             <div>
 
-                <h1 className='text-5xl mt-20 text-center font-bold '>Favorite Toy Collection</h1>
+                <h1 className='text-5xl mt-20 text-center font-bold opacity-80 '>Favorite Toy Collection</h1>
 
                 <div className='md:h-[90vh] mt-6 flex flex-col md:flex-row justify-between items-center p-10 gap-5'>
 

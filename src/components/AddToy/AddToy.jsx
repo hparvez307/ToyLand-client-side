@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import './AddToy.css'
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AddToy = () => {
-    const {  user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const {
         register,
         handleSubmit,
@@ -13,6 +14,25 @@ const AddToy = () => {
 
 
     const handleAddToy = (data) => {
+            fetch('https://toy-land-server.vercel.app/addAToy', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then( res => res.json())
+            .then( data => {
+                console.log(data);
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Successfully Added Toy Car',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                      })
+                }
+            })
 
         console.log(data)
     }
@@ -125,19 +145,19 @@ const AddToy = () => {
 
 
                 <div className="my-6 w-full">
-                        <label className="input-group input-group-vertical">
-                            <span>Detail Description</span>
-                            <input className="input px-3 input-bordered"
-                                {...register('description', { required: true })}
-                                type='text'
-                                placeholder='Detail Description'
-                            /> </label>
-                    </div>
+                    <label className="input-group input-group-vertical">
+                        <span>Detail Description</span>
+                        <input className="input px-3 input-bordered"
+                            {...register('description', { required: true })}
+                            type='text'
+                            placeholder='Detail Description'
+                        /> </label>
+                </div>
 
 
 
-              <button className='btn btn-block'><input type="submit" value='Add Toy' className='text-3xl' /></button>
-                
+                <button className='btn btn-block'><input type="submit" value='Add Toy' className='text-3xl' /></button>
+
             </form>
 
 

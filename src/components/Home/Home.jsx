@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import './Home.css'
 import Lottie from 'lottie-react'
-import ani from '../../assets/lotti.json'
+import car from '../../assets/car.json'
 import ToyCard from '../ToyCard/ToyCard';
 import CategoryTab from '../CategoryTab/CategoryTab';
 import HomeSlider from '../HomeSlider/HomeSlider';
@@ -26,10 +26,10 @@ const Home = () => {
         <>
 
             {/* hero section */}
-            <div className='hero bg-primary flex pt-14 px-7 justify-between flex-col lg:flex-row  pb-24'>
+            <div className='hero bg-primary flex  px-7 justify-between flex-col lg:flex-row  pb-24'>
 
                 <div className='w-full text-center '>
-                    <h1 className='text-7xl max-[571px]:pt-8 text-bold tracking-wider mb-5  -mt-20'>Toys and Games</h1>
+                    <h1 className='text-7xl pt-8 text-bold tracking-wider mb-5  '>Toys, Cars and Games</h1>
                     <p>
                         The concepts of games and toys have a very important role in childrens lives. It contributes to the development of cognitive, motor, psychosocial, emotional, and linguistic skills. It also plays a key role in raising self-confident, creative, and happy children. Therefore, attention should be paid to the concepts of games and toys, which are so important for the child to be a part of society as a healthy individual at every stage of his development.
                     </p>
@@ -37,7 +37,7 @@ const Home = () => {
 
 
                 <div className='w-full max-[571px]:pt-8'>
-                    <Lottie animationData={ani} loop={true} />
+                    <Lottie animationData={car} loop={true} />
 
                 </div>
 
