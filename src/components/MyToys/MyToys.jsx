@@ -24,7 +24,8 @@ const MyToys = () => {
     <thead>
       <tr >
         
-        <th>Seller Name</th> 
+        <th className='text-center'>Seller</th> 
+       
         <th>Toy Name</th> 
         <th>Sub-Category</th> 
         <th>Price</th> 

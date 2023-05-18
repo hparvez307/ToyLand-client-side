@@ -11,7 +11,7 @@ const FavToys = () => {
                 <div className='md:h-[90vh] mt-6 flex flex-col md:flex-row justify-between items-center p-10 gap-5'>
 
                     <div className=' h-full w-full'>
-                        <h1 className='text-2xl text-bold text-center mb-4'>Toy Car</h1>
+                        <h1 className='text-2xl text-bold text-center mb-4'>Sports Car</h1>
                         <img className='h-full w-full' src="https://i.ibb.co/KVsK5gD/photo-1536454891705-7f5a5c762d3a-ixlib-rb-4-0.jpg" alt="" />
                     </div>
 

@@ -21,7 +21,7 @@ const ToyDetails = () => {
 
 
 <div className="card lg:card-side bg p-10 bg-base-100 shadow-xl">
-  <figure><img className='w-[400px] ml-36 h-[350px] border' src={photo} alt="Album"/></figure>
+  <figure><img className='w-[400px] md:ml-36 h-[350px] border' src={photo} alt="Album"/></figure>
   <div className="card-body">
     <h2 className="text-3xl text-bold mb-5">  {name}</h2>
     <h2 className=""><span className='text-bold '>Seller Name:</span> {sellerName}</h2>
@@ -31,9 +31,7 @@ const ToyDetails = () => {
     <p><span className='text-bold '>Available Quantity:</span> {quantity}</p>
     <p> {description}</p>
 
-    {/* <div className="card-actions justify-end">
-      <button className="btn btn-primary">Listen</button>
-    </div> */}
+    
   </div>
 </div>
 

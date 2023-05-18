@@ -46,7 +46,7 @@ const Header = () => {
                     </ul>
                 </div>
 
-                <img className='h-14' src="logo.png" alt="" />
+               <Link><img className='h-14' src="https://i.ibb.co/CnHwkS5/logo-2.png" alt="" /></Link> 
 
                 <NavLink to="/" ><h1 className='text-4xl  font-extrabold tracking-wider'>TOY<span className='' >LAND</span></h1></NavLink>
 

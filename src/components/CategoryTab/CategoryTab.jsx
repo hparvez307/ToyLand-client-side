@@ -40,7 +40,7 @@ const CategoryTab = () => {
 
                             <Tab > <h1 className='text-2xl opacity-70   text-center font-bold '>Police Car</h1></Tab>
                             <Tab > <h1 className='text-2xl opacity-70   text-center font-bold '>Truck</h1></Tab>
-                            <Tab > <h1 className='text-2xl opacity-70   text-center font-bold '>Car</h1></Tab>
+                            <Tab > <h1 className='text-2xl opacity-70   text-center font-bold '>Sports Car</h1></Tab>
 
 
                         </div>
