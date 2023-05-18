@@ -16,9 +16,9 @@ const Register = () => {
 
 
     return (
-        <div className='w-1/2 rounded bg mx-auto  my-10'>
+        <div className='md:w-1/2 w-10/12 rounded bg mx-auto  my-10'>
 
-            <form className='p-5'>
+            <form onSubmit={handleRegister} className='p-5'>
 
                 <div className="my-6">
                     <label className="input-group input-group-vertical">
@@ -50,7 +50,7 @@ const Register = () => {
                 <div className="mb-6">
                     <label className="input-group input-group-vertical">
                         <span>Phot Url</span>
-                        <input type="file" name='photo' className="input required  input-bordered" />
+                        <input type="file" name='photo' className="input pt-2 required  input-bordered" />
                     </label>
                 </div>
 
