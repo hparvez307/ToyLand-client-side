@@ -15,7 +15,7 @@ const Login = () => {
     const [error, setError] = useState('');
 
 
-
+    // login with email and password and set user info
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -39,7 +39,7 @@ const Login = () => {
     }
 
 
-
+    // login with google
     const handleGoogle = () => {
         google()
             .then(res => {

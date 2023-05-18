@@ -3,46 +3,46 @@ import React from 'react';
 const FavToys = () => {
     return (
         <>
-            
+
             <div>
 
-<h1 className='text-5xl mt-20 text-center font-bold '>Favorite Toy Collection</h1>
+                <h1 className='text-5xl mt-20 text-center font-bold '>Favorite Toy Collection</h1>
 
-<div className='md:h-[90vh] mt-6 flex flex-col md:flex-row justify-between items-center p-10 gap-5'>
+                <div className='md:h-[90vh] mt-6 flex flex-col md:flex-row justify-between items-center p-10 gap-5'>
 
-    <div className=' h-full w-full'>
-        <h1 className='text-2xl text-center mb-4'>Toy Car</h1>
-        <img className='h-full w-full' src="https://i.ibb.co/KVsK5gD/photo-1536454891705-7f5a5c762d3a-ixlib-rb-4-0.jpg" alt="" />
-    </div>
+                    <div className=' h-full w-full'>
+                        <h1 className='text-2xl text-bold text-center mb-4'>Toy Car</h1>
+                        <img className='h-full w-full' src="https://i.ibb.co/KVsK5gD/photo-1536454891705-7f5a5c762d3a-ixlib-rb-4-0.jpg" alt="" />
+                    </div>
 
 
 
-    <div className='h-full w-full'>
-        <h1 className='text-2xl text-center mb-4'>Mixed Collection</h1>
-        
-        <div className='flex flex-col  justify-end gap-9 items-center'>
-            <div className='h-[full]'>
-            <img className='h-[255px]' src="https://i.ibb.co/HKzrmWQ/photo-1596461404969-9ae70f2830c1-ixlib-rb-4-0.jpg" alt="" />
+                    <div className='h-full w-full'>
+                        <h1 className='text-2xl text-bold text-center mb-4'>Mixed Collection</h1>
+
+                        <div className='flex flex-col  justify-end gap-9 items-center'>
+                            <div className='h-[full]'>
+                                <img className='h-[255px]' src="https://i.ibb.co/HKzrmWQ/photo-1596461404969-9ae70f2830c1-ixlib-rb-4-0.jpg" alt="" />
+                            </div>
+
+                            <div className='h-[full]'>
+                                <img className='h-[255px]' src="https://i.ibb.co/zSVPNDw/photo-1585366119957-e9730b6d0f60-ixlib-rb-4-0.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div className='h-full w-full'>
+                        <h1 className='text-2xl text-bold text-center  mb-4'>Toy Police Car</h1>
+                        <img className='h-full' src="https://i.ibb.co/b7Mz39V/photo-1503739171234-327ce271626f-ixlib-rb-4-0.jpg" alt="" />
+                    </div>
+
+                </div>
+
+
             </div>
-
-            <div className='h-[full]'>
-            <img className='h-[255px]' src="https://i.ibb.co/zSVPNDw/photo-1585366119957-e9730b6d0f60-ixlib-rb-4-0.jpg" alt="" />
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div className='h-full w-full'>
-        <h1 className='text-2xl text-center  mb-4'>Toy Police Car</h1>
-        <img className='h-full' src="https://i.ibb.co/b7Mz39V/photo-1503739171234-327ce271626f-ixlib-rb-4-0.jpg" alt="" />
-    </div>
-
-</div>
-
-
-</div>
         </>
     );
 };
