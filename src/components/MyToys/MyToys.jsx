@@ -27,7 +27,8 @@ const MyToys = () => {
         <th>Sub-Category</th> 
         <th>Price</th> 
         <th >Available Quantity</th> 
-        <th className='pl-14'>Action</th>
+        <th className='text-end '>Action</th>
+        <th></th>
       </tr>
     </thead> 
     <tbody>

@@ -12,7 +12,8 @@ const MyToysRow = ({toy}) => {
         <td className='pl-5'>{subCategory}</td> 
         <td className='pl-3'>{price}</td> 
         <td className='pl-16'>{quantity}</td> 
-        <td><Link to={`/toyDetails/${_id}`}><button className='btn btn-error'>View Details</button></Link></td>
+        <td><Link to={`/toyUpdate/${_id}`}><button className='btn btn-primary'>Update</button></Link></td>
+        <td><Link to={`/toyDelete/${_id}`}><button className='btn btn-error'>Delete</button></Link></td>
       </tr>
       </>
     );
