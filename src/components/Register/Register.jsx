@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
 
@@ -17,6 +18,7 @@ const Register = () => {
 
     return (
         <div className='md:w-1/2 w-10/12 rounded bg mx-auto  my-10'>
+              <h1 className='text-5xl text-center font-bold pb-20 pt-10'>Register</h1>
 
             <form onSubmit={handleRegister} className='p-5'>
 
@@ -41,7 +43,7 @@ const Register = () => {
                 <div className="mb-6">
                     <label className="input-group input-group-vertical">
                         <span>Password</span>
-                        <input type="password" placeholder="Passwrod" name='password' required className="input px-3 input-bordered" />
+                        <input type="password" placeholder="Password" name='password' required className="input px-3 input-bordered" />
                     </label>
                 </div>
 
@@ -55,14 +57,12 @@ const Register = () => {
                 </div>
 
 
-                <input className='btn btn-error my-6 w-6/12 mx-auto' type="submit" value="Register" />
-
-
+                <input className='btn btn-error mt-6  w-6/12 mx-auto' type="submit" value="Register" />
 
             </form>
 
 
-
+            <p className='pb-5  text-center  '>Have an account?  <span className='text-blue-700'> <Link to='/login'>Login</Link></span></p>
 
 
 
