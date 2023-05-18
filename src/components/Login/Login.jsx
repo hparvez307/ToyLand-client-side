@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import {FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -44,8 +44,8 @@ const Login = () => {
 
 
 
-        <div className='flex flex-col gap-4 md:ml-8 mt-8 items-center'>
-                <button  className="btn w-[350px] font-bold btn-outline"><FaGithub className='w-8 text-2xl'></FaGithub>  Login with Github </button>
+        <div className='flex flex-col md:ml-8 mt-8 items-center'>
+                
                 <button  className="btn mb-8 w-[350px] font-bold  btn-outline btn-primary"><FaGoogle className='w-8 text-2xl'></FaGoogle> Login with google</button>
             </div>
 
