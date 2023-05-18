@@ -4,6 +4,7 @@ import './Home.css'
 import Lottie from 'lottie-react'
 import ani from '../../assets/lotti.json'
 import ToyCard from '../ToyCard/ToyCard';
+import CategoryTab from '../CategoryTab/CategoryTab';
 
 const Home = () => {
 
@@ -46,7 +47,7 @@ const Home = () => {
 
                 <h1 className='text-5xl  text-center mt-14 font-bold opacity-70'>Toy Gallery</h1>
 
-                <div className='grid mt-16 w-11/12 mx-auto lg:grid-cols-3 gap-5 justify-between  items-center'>
+                <div className='grid mt-16 md:ml-4 mx-auto lg:grid-cols-3 gap-10 justify-center  items-center'>
 
                     {
                         toyPhoto.map((photo, index) => <ToyCard key={index + 1} photo={photo}></ToyCard>)
@@ -58,8 +59,11 @@ const Home = () => {
 
             {/* tab section */}
 
-            <div className='my-10'>
+            <div className='mt-24 '>
 
+            <h1 className='text-5xl  text-center pb-10 font-bold opacity-70'>Shop by Category</h1>
+
+                        <CategoryTab></CategoryTab>
             </div>
 
 
