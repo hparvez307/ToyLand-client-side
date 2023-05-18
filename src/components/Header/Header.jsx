@@ -5,7 +5,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
 
-    const { logOut, user, chef } = useContext(AuthContext);
+    const { logOut, user} = useContext(AuthContext);
 
     console.log(user);
 
@@ -37,7 +37,7 @@ const Header = () => {
                         <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>My Toys</span></NavLink>
                         </li>
 
-                        <li> <NavLink to="/addatoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>Add A Toy</span></NavLink>
+                        <li> <NavLink to="/addtoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>Add A Toy</span></NavLink>
                         </li>
 
                         <li><NavLink to="/blog" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>Blog</span></NavLink>
@@ -71,7 +71,7 @@ const Header = () => {
                     <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>My Toys</span></NavLink>
                     </li>
 
-                    <li> <NavLink to="/addatoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>Add A Toy</span></NavLink>
+                    <li> <NavLink to="/addtoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>Add A Toy</span></NavLink>
                     </li>
 
                     <li><NavLink to="/blog" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>Blog</span></NavLink>
