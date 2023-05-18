@@ -5,6 +5,8 @@ import MyToysRow from './MyToysRow';
 const MyToys = () => {
     const {user} = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
+    const [reload, setReload] = useState(false);
+
     console.log(myToys)
 
     useEffect(()=>{
@@ -12,9 +14,9 @@ const MyToys = () => {
         .then(res => res.json())
         .then(data => {
             setMyToys(data)
-
+            setReload(false);
         })
-    },[])
+    },[reload])
     return (
         <div>
            <div className="overflow-x-auto">
@@ -36,7 +38,7 @@ const MyToys = () => {
      
    
     {
-        myToys.map((toy, index) => <MyToysRow toy={toy} key={index+1}></MyToysRow>)
+        myToys.map((toy, index) => <MyToysRow toy={toy}  setReload={setReload} key={index+1}></MyToysRow>)
     }
    
    
