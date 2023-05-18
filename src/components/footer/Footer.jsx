@@ -1,8 +1,9 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='py-20   bg-black text-white mt-20 '>
+        <div className='py-20   bg  mt-20 '>
 
             <div className='flex flex-col lg:flex-row max-[600px]:text-center justify-between '>
 

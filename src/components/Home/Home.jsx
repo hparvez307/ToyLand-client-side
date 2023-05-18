@@ -5,6 +5,8 @@ import Lottie from 'lottie-react'
 import ani from '../../assets/lotti.json'
 import ToyCard from '../ToyCard/ToyCard';
 import CategoryTab from '../CategoryTab/CategoryTab';
+import HomeSlider from '../HomeSlider/HomeSlider';
+import FavToys from '../FavToys/FavToys';
 
 const Home = () => {
 
@@ -24,7 +26,7 @@ const Home = () => {
         <>
 
             {/* hero section */}
-            <div className='hero flex pt-14 px-7 justify-between flex-col lg:flex-row rounded-xl pb-24'>
+            <div className='hero bg-primary flex pt-14 px-7 justify-between flex-col lg:flex-row  pb-24'>
 
                 <div className='w-full text-center '>
                     <h1 className='text-7xl max-[571px]:pt-8 text-bold tracking-wider mb-5  -mt-20'>Toys and Games</h1>
@@ -61,54 +63,33 @@ const Home = () => {
 
             <div className='mt-24 '>
 
-            <h1 className='text-5xl  text-center pb-10 font-bold opacity-70'>Shop by Category</h1>
+                <h1 className='text-5xl  text-center pb-10 font-bold opacity-70'>Shop by Category</h1>
 
-                        <CategoryTab></CategoryTab>
+                <CategoryTab></CategoryTab>
             </div>
 
 
-            {/* popular item section */}
+            {/* home slider section */}
 
-            {/* <div className='popular-section mt-20 flex flex-col-reverse lg:flex-row justify-between items-center p-10 gap-5'>
+            <div className='popular-section my-12 bg-primary  justify-between items-center pt-7 pb-20 '>
 
-                <div className='w-full'>
-                    <h1 className='lg:text-5xl text-2xl font-bold'>Food, in the end, in our own tradition, is something holy. It's not about nutrients and calories. It's about sharing. It's about honesty. It's about identity.</h1>
-                </div>
+                <h1 className='text-5xl  text-center pb-10 font-bold opacity-70'>Toy Land Popular Toys</h1>
 
-                <div className='w-full'>
-                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
-                </div>
-
-            </div> */}
-
-
-
-            {/* featured food section */}
-
-            {/* <div>
-
-                <h1 className='text-5xl mt-20 chef-title font-bold opacity-60'>Featured Food</h1>
-
-                <div className='featured-item mt-6 flex flex-col-reverse lg:flex-row justify-between items-center p-10 gap-5'>
-
-                    <div className='w-full'>
-                        <h1 className='text-2xl featured-title mb-4'>Traditional</h1>
-                        <img src="https://plus.unsplash.com/premium_photo-1661777678748-f22506af1965?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
-                    </div>
-
-                    <div className='w-full'>
-                        <h1 className='text-2xl featured-title mb-4'>Festival</h1>
-                        <img src="https://images.unsplash.com/photo-1608835291093-394b0c943a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="" />
-                    </div>
-                    <div className='w-full'>
-                        <h1 className='text-2xl featured-title mb-4'>Occasional</h1>
-                        <img src="https://images.unsplash.com/photo-1518133683791-0b9de5a055f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
-                    </div>
-
+                <div>
+                    <HomeSlider></HomeSlider>
                 </div>
 
 
-            </div> */}
+            </div>
+
+
+
+
+            {/* favorite toy  section */}
+
+          <div className='my-16'>
+            <FavToys></FavToys>
+          </div>
         </>
     );
 };
