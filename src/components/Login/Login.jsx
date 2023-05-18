@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {FaGoogle } from 'react-icons/fa';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const {loginUser, google} = useContext(AuthContext);
+    
+    const [success, setSuccess] = useState('');
+    const [error, setError] = useState('');
+
+
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -10,6 +18,36 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log( email, password);
+
+        loginUser(email, password)
+        .then(result => {
+            setSuccess('login successful');
+            setError('');
+            console.log(result.user)
+        })
+        .catch( er => {
+            setError('The Password is Wrong')
+            console.log(er.message)
+            setSuccess('');
+        })
+
+    }
+
+
+
+    const handleGoogle = () => {
+        google()
+            .then(res => {
+                setSuccess('login successful');
+                console.log(res.user);
+                setError('');
+                
+
+            })
+            .catch(er => {
+                setSuccess('');
+                setError(er.message)
+            })
     }
 
     return (
@@ -31,9 +69,15 @@ const Login = () => {
                     <input type="password" placeholder="Password" name='password' required className="input px-3 input-bordered" />
                 </label>
             </div>
+          
+            <p className=' mt-3 text-green-500 text-center'>{success}</p>
+            <p className='text-red-500 mt-3  text-center '>{error}</p>
 
+            <div className='flex justify-center'>
+            <input className='btn btn-primary my-6 w-6/12 ' type="submit" value="Login" />
+            </div>
 
-            <input className='btn btn-error my-6 w-6/12 mx-auto' type="submit" value="Login" />
+            
 
 
 
@@ -46,7 +90,7 @@ const Login = () => {
 
         <div className='flex flex-col md:ml-8 mt-8 items-center'>
                 
-                <button  className="btn mb-8 w-[350px] font-bold  btn-outline btn-primary"><FaGoogle className='w-8 text-2xl'></FaGoogle> Login with google</button>
+                <button onClick={handleGoogle}  className="btn mb-8 w-[350px] font-bold  btn-outline btn-primary"><FaGoogle className='w-8 text-2xl'></FaGoogle> Login with google</button>
             </div>
 
 

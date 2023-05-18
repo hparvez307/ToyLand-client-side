@@ -2,3 +2,11 @@
     background-color: #ece5db;
 }
 
+
+.user-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    margin-right: 10px;
+}

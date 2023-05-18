@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import './header.css';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
+
+    const { logOut, user, chef } = useContext(AuthContext);
+
+    console.log(user);
+
+
+
+    // user logout
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(er => console.log(er.message))
+    }
+
+
     return (
         <div className="navbar py-10  px-6  header rounded">
             <div className="navbar-start">
@@ -60,15 +76,23 @@ const Header = () => {
 
                     <li><NavLink to="/blog" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold text-lg'>Blog</span></NavLink>
                     </li>
-
-
-
-
                 </ul>
             </div>
-            
+
+
+
+
             <div className="navbar-end">
-                <Link to='login' className="btn">Login</Link>
+
+                {
+                    user ? <> <img title={user?.displayName} className='user-img'
+                        src="https://i.ibb.co/r0T1tyW/photo-1602233158242-3ba0ac4d2167-ixlib-rb-4-0.jpg" alt="" />
+
+                        <button onClick={handleLogout} className='btn font-bold '>Logout</button>
+                    </>
+                        : <Link to='login' className="btn">Login</Link>
+                }
+
             </div>
         </div>
     );
