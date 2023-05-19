@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SubCategoryCard = ({ toy }) => {
 
@@ -13,6 +15,13 @@ const SubCategoryCard = ({ toy }) => {
 
   const ratings = parseInt(rating);
   const rate = Math.floor(ratings);
+
+  // AOS implement
+  useEffect(() => {
+    AOS.init({
+      duration: 3000
+    });
+  }, []);
 
 
   const handleViewDetails = () => {
@@ -32,7 +41,7 @@ const SubCategoryCard = ({ toy }) => {
   }
 
   return (
-    <div className="card mx-auto  w-96 bg-base-100  shadow-inner shadow-rose-300">
+    <div data-aos="fade-up" className="card mx-auto  w-96 bg-base-100  shadow-inner shadow-rose-300">
       <figure><img className='p-6 ' src={photo} alt="Shoes" /></figure>
       <div className="card-body text-center">
         <h2 className="text-3xl text-bold ">  {name}</h2>

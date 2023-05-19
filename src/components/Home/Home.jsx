@@ -52,14 +52,18 @@ const Home = () => {
             <div className='px-7'>
 
                 <h1 className='text-5xl  text-center mt-14 font-bold opacity-70'>Toy Gallery</h1>
+                
 
-                <div className='grid mt-16 md:ml-4 mx-auto lg:grid-cols-3 gap-10 justify-center  items-center'>
+                <div  className='grid mt-16 md:ml-4 mx-auto lg:grid-cols-3 gap-10 justify-center  items-center'>
 
                     {
                         toyPhoto.map((photo, index) => <ToyCard key={index + 1} photo={photo}></ToyCard>)
                     }
 
                 </div>
+              
+
+                
             </div>
 
 
