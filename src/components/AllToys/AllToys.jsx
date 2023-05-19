@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import AllToyRow from './AllToyRow';
 import { useForm } from 'react-hook-form';
+import useTitle from '../allHooks/useTitle';
 
 
 
 
 
 const AllToys = () => {
+
+  useTitle('All Toys');
 
   const {
     register,

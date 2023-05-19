@@ -62,7 +62,7 @@ const MyToysRow = ({toy,setReload}) => {
         
         <td>{name}</td> 
         <td className='pl-5'>{subCategory}</td> 
-        <td className='pl-3'>{price}</td> 
+        <td className='pl-3'>${price}</td> 
         <td className='pl-16'>{quantity}</td> 
         <td><Link to={`/toyUpdate/${_id}`}><button className='btn btn-primary'>Update</button></Link></td>
         <td><button onClick={()=>handleDelete(_id)} className='btn btn-error'>Delete</button></td>

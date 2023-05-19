@@ -7,8 +7,11 @@ import ToyCard from '../ToyCard/ToyCard';
 import CategoryTab from '../CategoryTab/CategoryTab';
 import HomeSlider from '../HomeSlider/HomeSlider';
 import FavToys from '../FavToys/FavToys';
+import useTitle from '../allHooks/useTitle';
 
 const Home = () => {
+
+    useTitle('Home');
 
     const toyPhoto = [
         "https://i.ibb.co/0nQBygj/71-I8-DVMEao-L.jpg",

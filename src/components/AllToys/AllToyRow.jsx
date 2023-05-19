@@ -10,7 +10,7 @@ const AllToyRow = ({toy}) => {
         <td>{sellerName}</td> 
         <td>{name}</td> 
         <td className='pl-5'>{subCategory}</td> 
-        <td className='pl-3'>{price}</td> 
+        <td className='pl-3'>${price}</td> 
         <td className='pl-16'>{quantity}</td> 
         <td><Link to={`/toyDetails/${_id}`}><button className='btn btn-error'>View Details</button></Link></td>
       </tr>

@@ -3,8 +3,10 @@ import { useForm } from 'react-hook-form';
 import './AddToy.css'
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../allHooks/useTitle';
 
 const AddToy = () => {
+    useTitle('Add Toy');
     const { user } = useContext(AuthContext);
     const {
         register,
@@ -14,23 +16,23 @@ const AddToy = () => {
 
 
     const handleAddToy = (data) => {
-            fetch('https://toy-land-server.vercel.app/addAToy', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then( res => res.json())
-            .then( data => {
+        fetch('https://toy-land-server.vercel.app/addAToy', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Successfully Added Toy Car',
                         icon: 'success',
                         confirmButtonText: 'Ok'
-                      })
+                    })
                 }
             })
 

@@ -1,8 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../allHooks/useTitle';
 
 const Register = () => {
+
+    useTitle('Register');
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
 
@@ -18,8 +21,6 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, email, password);
-
-
 
 
         // check and show error to user
@@ -53,8 +54,6 @@ const Register = () => {
     }
 
 
-
-
     return (
         <div className='md:w-1/2 w-10/12 rounded bg mx-auto  my-10'>
             <h1 className='text-5xl text-center font-bold pb-20 pt-10'>Register</h1>
@@ -77,15 +76,12 @@ const Register = () => {
                 </div>
 
 
-
-
                 <div className="mb-6">
                     <label className="input-group input-group-vertical">
                         <span>Password</span>
                         <input type="password" placeholder="Password" name='password' required className="input px-3 input-bordered" />
                     </label>
                 </div>
-
 
 
                 <div className="mb-6">
@@ -107,8 +103,6 @@ const Register = () => {
 
 
             <p className='pb-5  text-center  '>Have an account?  <span className='text-blue-700'> <Link to='/login'>Login</Link></span></p>
-
-
 
         </div>
     );
