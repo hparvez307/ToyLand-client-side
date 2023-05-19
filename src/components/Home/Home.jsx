@@ -28,7 +28,7 @@ const Home = () => {
     return (
         <>
 
-            {/* hero section */}
+            {/* banner section */}
             <div className='hero bg-primary flex  px-7 justify-between flex-col lg:flex-row  pb-24'>
 
                 <div className='w-full space-y-5 mt-12 text-center '>
@@ -39,40 +39,33 @@ const Home = () => {
                     </p>
                 </div>
 
-
                 <div className='w-full max-[571px]:pt-8'>
                     <Lottie animationData={car} loop={true} />
-
                 </div>
 
             </div>
 
-            {/* main section */}
+
+            {/* toy gallery section */}
 
             <div className='px-7'>
 
                 <h1 className='text-5xl  text-center mt-14 font-bold opacity-70'>Toy Gallery</h1>
-                
 
-                <div  className='grid mt-16 md:ml-4 mx-auto lg:grid-cols-3 gap-10 justify-center  items-center'>
+                <div className='grid mt-16 md:ml-4 mx-auto lg:grid-cols-3 gap-10 justify-center  items-center'>
 
                     {
                         toyPhoto.map((photo, index) => <ToyCard key={index + 1} photo={photo}></ToyCard>)
                     }
 
                 </div>
-              
-
-                
             </div>
 
 
-            {/* tab section */}
+            {/* shop by category and tab section */}
 
             <div className='mt-24 mb-24  border-b-[1px] border-gray-400 pb-10'>
-
                 <h1 className='text-5xl  text-center  pb-10 font-bold opacity-70'>Shop by Category</h1>
-
                 <CategoryTab></CategoryTab>
             </div>
 
@@ -87,11 +80,7 @@ const Home = () => {
                     <HomeSlider></HomeSlider>
                 </div>
 
-
             </div>
-
-
-
 
             {/* favorite toy  section */}
 

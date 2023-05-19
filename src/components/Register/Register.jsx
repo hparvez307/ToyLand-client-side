@@ -41,7 +41,7 @@ const Register = () => {
                         console.log('user updated')
                     })
                     .catch((error) => {
-                        console.log('error ocurred', error.message)
+                        console.log('error', error.message)
                     });
                 const user = result.user;
                 console.log(user)

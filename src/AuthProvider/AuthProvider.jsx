@@ -8,19 +8,14 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
 
-  
     const googleProvider = new GoogleAuthProvider();
-
-
 
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
 
 
-
     // Register with email and password
     const createUser = (email, password) => {
-
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -42,12 +37,8 @@ const AuthProvider = ({ children }) => {
     }
 
 
-
-
-
     // logout 
     const logOut = () => {
-
         return signOut(auth);
     }
 
@@ -81,7 +72,6 @@ const AuthProvider = ({ children }) => {
         <AuthContext.Provider value={authInfo}>
             {children}
         </AuthContext.Provider>
-
 
     );
 };
