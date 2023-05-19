@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { FaStar, FaStarHalf } from 'react-icons/fa';
 
 const SubCategoryCard = ({ toy }) => {
 
@@ -9,6 +10,9 @@ const SubCategoryCard = ({ toy }) => {
   const { user } = useContext(AuthContext);
 
   const { name, rating, _id, photo, price } = toy;
+
+  const ratings = parseInt(rating);
+  const rate = Math.floor(ratings);
 
 
   const handleViewDetails = () => {
@@ -28,13 +32,27 @@ const SubCategoryCard = ({ toy }) => {
   }
 
   return (
-    <div className="card mx-auto w-96 bg-base-100  shadow-inner shadow-rose-300">
-      <figure><img className='p-2' src={photo} alt="Shoes" /></figure>
+    <div className="card mx-auto  w-96 bg-base-100  shadow-inner shadow-rose-300">
+      <figure><img className='p-6 ' src={photo} alt="Shoes" /></figure>
       <div className="card-body text-center">
         <h2 className="text-3xl text-bold ">  {name}</h2>
         <p><span className='text-bold '>price:</span>  ${price}</p>
-        <p><span className='text-bold '>Rating:</span> {rating}</p>
-        <div className="card-actions justify-center">
+
+        <div className='flex justify-center'>
+          <div>
+            <span className='text-bold '>Rating:</span> {rating}
+          </div>
+          {
+            (rate > 4) ? <div className='flex ml-2 mt-1 text-amber-400 '>
+              <FaStar /> <FaStar /><FaStar /> <FaStar /> <FaStar />
+            </div>
+              : <div className='flex ml-2 mt-1 text-amber-400 '>
+                <FaStar /> <FaStar /><FaStar /> <FaStar /> <FaStarHalf />
+              </div>
+          }
+        </div>
+
+        <div className="card-actions  mt-4 justify-center">
           <button onClick={handleViewDetails} className='btn btn-error'>View Details</button>
         </div>
       </div>

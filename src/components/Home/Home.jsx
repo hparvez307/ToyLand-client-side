@@ -65,9 +65,9 @@ const Home = () => {
 
             {/* tab section */}
 
-            <div className='mt-24 '>
+            <div className='mt-24 mb-24  border-b-[1px] border-gray-400 pb-10'>
 
-                <h1 className='text-5xl  text-center pb-10 font-bold opacity-70'>Shop by Category</h1>
+                <h1 className='text-5xl  text-center  pb-10 font-bold opacity-70'>Shop by Category</h1>
 
                 <CategoryTab></CategoryTab>
             </div>
@@ -91,9 +91,9 @@ const Home = () => {
 
             {/* favorite toy  section */}
 
-          <div className='my-16'>
-            <FavToys></FavToys>
-          </div>
+            <div className='my-16'>
+                <FavToys></FavToys>
+            </div>
         </>
     );
 };

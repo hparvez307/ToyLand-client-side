@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useTitle from '../allHooks/useTitle';
+import { FaStar, FaStarHalf } from 'react-icons/fa';
 
 const ToyDetails = () => {
   const { id } = useParams();
@@ -8,6 +9,9 @@ const ToyDetails = () => {
   const [toy, setToy] = useState([]);
 
   const { name, rating, sellerEmail, description, sellerName, subCategory, photo, price, quantity } = toy;
+
+  const ratings = parseInt(rating);
+  const rate = Math.floor(ratings);
 
   useEffect(() => {
     fetch(`https://toy-land-server.vercel.app/toys/${id}`)
@@ -27,7 +31,27 @@ const ToyDetails = () => {
           <h2 className=""><span className='text-bold '>Seller Name:</span> {sellerName}</h2>
           <p className='pt-2'><span className='text-bold  '>Seller Email:</span> {sellerEmail}</p>
           <p><span className='text-bold '>price:</span>  ${price}</p>
-          <p><span className='text-bold '>Rating:</span> {rating}</p>
+
+          <div className='flex justify-start'>
+            <div>
+              <span className='text-bold '>Rating:</span> {rating}
+            </div>
+
+
+            {
+              (rate > 4) ? <div className='flex ml-2 mt-1 text-amber-400 '>
+                <FaStar /> <FaStar /><FaStar /> <FaStar /> <FaStar />
+              </div>
+                : <div className='flex ml-2 mt-1 text-amber-400 '>
+                  <FaStar /> <FaStar /><FaStar /> <FaStar /> <FaStarHalf />
+                </div>
+            }
+
+          </div>
+
+
+
+
           <p><span className='text-bold '>Available Quantity:</span> {quantity}</p>
           <p> {description}</p>
         </div>

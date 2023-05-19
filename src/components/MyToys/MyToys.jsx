@@ -45,8 +45,8 @@ const MyToys = () => {
 
       <div className='flex justify-center  gap-4 mt-10'>
         <h1 className='text-center  text-4xl font-bold'>Filter by:</h1>
-        <button onClick={handleMin} className='btn '>Lower Price</button>
-        <button onClick={handleMax} className='btn '>Higher Price</button>
+        <button onClick={handleMin} className='btn btn-primary'>Lower Price</button>
+        <button onClick={handleMax} className='btn btn-error'>Higher Price</button>
       </div>
 
 

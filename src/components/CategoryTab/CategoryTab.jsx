@@ -40,35 +40,8 @@ const CategoryTab = () => {
         })
     },[])
     
-  
 
-
-
-
-
-
-
-
-    // const policeCar = [
-    //     "https://i.ibb.co/x5BDTGt/1-32-die-cast-metal-cars-pullback-toy-mini-cooper-metal-car-for-original-imafqgrfm2j3fhka.webp",
-    //     "https://i.ibb.co/RQCVvGr/1-32-Toy-Car-Mini-Police-Metal-Toy-Alloy-Super-Car-Diecasts-Toy-Vehicles-Car-Model.jpg",
-    //     "https://i.ibb.co/s1Hb39B/Screenshot-190.png"
-    // ]
-
-    // const truck = [
-    //     "https://i.ibb.co/0nQBygj/71-I8-DVMEao-L.jpg",
-    //     "https://i.ibb.co/N3tSg79/maxresdefault-1.jpg",
-    //     "https://i.ibb.co/vszWNS1/WH1101-PR-HS.png"
-    // ]
-    // const sportsCar = [
-    //     "https://i.ibb.co/bWX1gds/71p-Dz-MQtj4-S-AC-SL1500.jpg",
-    //     "https://i.ibb.co/s6XrHn3/71z-Lklxq-ZSL-SX466-500x500.jpg",
-    //     "https://i.ibb.co/jMgPNvC/158079367-max.jpg"
-    // ]
-
-
-
-
+    
     return (
 
         <div >
