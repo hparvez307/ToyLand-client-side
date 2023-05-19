@@ -18,6 +18,7 @@ import AllToys from './components/AllToys/AllToys.jsx';
 import ToyDetails from './components/ToyDetails/ToyDetails.jsx';
 import MyToys from './components/MyToys/MyToys.jsx';
 import ToyUpdate from './components/ToyAction/ToyUpdate.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 
 const router =  createBrowserRouter([
@@ -69,7 +70,7 @@ const router =  createBrowserRouter([
   },
   {
     path: '/*',
-    element: <div>roorrrrrrrr</div>
+    element: <ErrorPage></ErrorPage>
   }
 
 ])
