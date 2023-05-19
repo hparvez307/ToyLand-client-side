@@ -81,7 +81,7 @@ const AllToys = () => {
           <tbody>
 
             {
-              toys.slice(0, 20).map((toy, index) => <AllToyRow toy={toy} key={index + 1}></AllToyRow>)
+              toys.map((toy, index) => <AllToyRow toy={toy} key={index + 1}></AllToyRow>)
             }
 
           </tbody>

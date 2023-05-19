@@ -47,7 +47,7 @@ const Register = () => {
                 console.log(user)
             })
             .catch(er => {
-                setError(error.message);
+                setError(er.message);
                 setSuccess('');
                 console.log(er.message)
             })

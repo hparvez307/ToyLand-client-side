@@ -14,7 +14,7 @@ const MyToys = () => {
   console.log(myToys)
 
   const handleMax = () => {
-    fetch('https://toy-land-server.vercel.app/maxPriceToy')
+    fetch(`https://toy-land-server.vercel.app/maxPriceToy?email=${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setMyToys(data);
@@ -23,7 +23,7 @@ const MyToys = () => {
 
 
   const handleMin = () => {
-    fetch('https://toy-land-server.vercel.app/minPriceToy')
+    fetch(`https://toy-land-server.vercel.app/minPriceToy?email=${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setMyToys(data);
