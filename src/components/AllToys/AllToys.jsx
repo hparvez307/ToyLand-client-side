@@ -46,7 +46,7 @@ const AllToys = () => {
   return (
     <div>
 
-      <form className='container flex mt-3 w-4/12 gap-2 mx-auto ' onSubmit={handleSubmit(searchToyByName)}>
+      <form className='container flex mt-3 w-8/12 md:w-4/12 gap-2 mx-auto ' onSubmit={handleSubmit(searchToyByName)}>
 
         <div className=" w-full">
           <label className="input-group input-group-vertical">
