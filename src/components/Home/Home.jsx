@@ -48,11 +48,11 @@ const Home = () => {
 
             {/* toy gallery section */}
 
-            <div className='px-7'>
+            <div className='px-7 '>
 
-                <h1 className='text-5xl  text-center mt-14 font-bold opacity-70'>Toy Gallery</h1>
+                <h1 className='text-5xl text-center mt-14 font-bold opacity-70'>Toy Gallery</h1>
 
-                <div className='grid mt-16 md:ml-4 mx-auto lg:grid-cols-3 gap-10 justify-center  items-center'>
+                <div className='grid mt-16  lg:grid-cols-3 gap-10 justify-center  items-center'>
 
                     {
                         toyPhoto.map((photo, index) => <ToyCard key={index + 1} photo={photo}></ToyCard>)
@@ -84,7 +84,7 @@ const Home = () => {
 
             {/* favorite toy  section */}
 
-            <div className='my-16'>
+            <div className='my-16 '>
                 <FavToys></FavToys>
             </div>
         </>

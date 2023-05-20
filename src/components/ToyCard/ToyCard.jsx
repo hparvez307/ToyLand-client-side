@@ -13,7 +13,7 @@ const ToyCard = ({ photo }) => {
     }, []);
 
     return (
-        <div className="card shadow-2xl card-compact border p-7 toyimg w-96 bg-base-100">
+        <div className="card shadow-2xl card-compact border p-7 toyimg  bg-base-100">
 
             <figure><img data-aos="flip-left" className='h-80 rounded w-full' src={photo} alt="Shoes" /></figure>
 

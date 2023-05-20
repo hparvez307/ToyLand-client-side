@@ -115,6 +115,7 @@ const AddToy = () => {
                             <input className="input px-3 input-bordered"
                                 {...register('price', { required: true })}
                                 type='number'
+                                max={1000}
                                 placeholder='Price'
                             /> </label>
                     </div>

@@ -34,11 +34,15 @@ const Header = () => {
 
                         </li>
 
-                        <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>MY TOYS</span></NavLink>
-                        </li>
+                        {
+                            user ? <> <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>MY TOYS</span></NavLink>
+                            </li>
 
-                        <li> <NavLink to="/addtoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>ADD A TOY</span></NavLink>
-                        </li>
+                                <li> <NavLink to="/addtoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>ADD A TOY</span></NavLink>
+                                </li>
+                            </>
+                                : ""
+                        }
 
                         <li> <NavLink to="/toyCard" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>TOY COLLECTION</span></NavLink>
                         </li>
@@ -71,11 +75,20 @@ const Header = () => {
 
                     </li>
 
-                    <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>MY TOYS</span></NavLink>
-                    </li>
+                    {
+                        user ? <> <li> <NavLink to="/mytoys" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>MY TOYS</span></NavLink>
+                        </li>
 
-                    <li> <NavLink to="/addtoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>ADD A TOY</span></NavLink>
-                    </li>
+                            <li> <NavLink to="/addtoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>ADD A TOY</span></NavLink>
+                            </li>
+                        </>
+                            : ""
+                    }
+
+
+
+
+
 
                     <li> <NavLink to="/toyCard" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>TOY COLLECTION</span></NavLink>
                     </li>

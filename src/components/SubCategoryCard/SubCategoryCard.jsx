@@ -30,7 +30,7 @@ const SubCategoryCard = ({ toy }) => {
     if (!user) {
       Swal.fire({
         title: 'Login!',
-        text: 'You have to log in first to view details!',
+        text: `You have to log in first to view ${name} details!`,
         icon: 'warning',
         confirmButtonText: 'Ok'
       })
