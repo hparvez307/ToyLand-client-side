@@ -25,11 +25,11 @@ const FavToys = () => {
 
                         <div className='flex flex-col  justify-end gap-9 items-center'>
                             <div className='h-[full]'>
-                                <img className='h-[255px]' src="https://i.ibb.co/HKzrmWQ/photo-1596461404969-9ae70f2830c1-ixlib-rb-4-0.jpg" alt="" />
+                            <Link to='/toyCard'>  <img className='h-[255px]' src="https://i.ibb.co/HKzrmWQ/photo-1596461404969-9ae70f2830c1-ixlib-rb-4-0.jpg" alt="" /> </Link>
                             </div>
 
                             <div className='h-[full]'>
-                                <img className='h-[255px]' src="https://i.ibb.co/zSVPNDw/photo-1585366119957-e9730b6d0f60-ixlib-rb-4-0.jpg" alt="" />
+                            <Link to='/toyCard'>  <img className='h-[255px]' src="https://i.ibb.co/zSVPNDw/photo-1585366119957-e9730b6d0f60-ixlib-rb-4-0.jpg" alt="" /></Link>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ const FavToys = () => {
 
                     <div className='h-full w-full'>
                         <h1 className='text-2xl text-bold text-center  mb-4'>Toy Police Car</h1>
-                        <img className='h-full' src="https://i.ibb.co/b7Mz39V/photo-1503739171234-327ce271626f-ixlib-rb-4-0.jpg" alt="" />
+                        <Link to='/toyCard'> <img className='h-full' src="https://i.ibb.co/b7Mz39V/photo-1503739171234-327ce271626f-ixlib-rb-4-0.jpg" alt="" /></Link>
                     </div>
 
                 </div>
