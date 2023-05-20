@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css'
 import { Link } from 'react-router-dom';
-import { FaCarSide, FaLocationArrow, FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
+import { FaCarSide, FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -25,23 +25,27 @@ const Footer = () => {
                 </div>
 
                 {/* policies */}
-                <div className='max-[600px]:mb-10'>
+                <div className='max-[571px]:mb-10 max-[571px]:mt-10'>
                     <h1 className='text-2xl my-3  font-bold '>Policies</h1>
+                    <div className='space-y-1'>
                     <p>ToyLand Privacy Policy</p>
                     <p>Terms of Service</p>
                     <p>Refund policy</p>
                     <p>Payment policy</p>
-
+                    
+                </div>
                 </div>
                 {/* important links */}
-                <div className='max-[600px]:mb-10'>
+                <div className='max-[571px]:mb-10'>
                     <h1 className='text-2xl my-3  font-bold '>Important Links</h1>
-                    <p>About Us</p>
+                   <div className='space-y-1'>
+                   <p>About Us</p>
                     <p>Blog</p>
                     <p>Contact Us</p>
                     <p>Shipping Method</p>
                     <p>Order Tracking</p>
 
+                   </div>
                 </div>
 
                 {/* contact info */}

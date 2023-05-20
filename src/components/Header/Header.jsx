@@ -5,11 +5,11 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
 
-    const { logOut, user} = useContext(AuthContext);
+    const { logOut, user } = useContext(AuthContext);
 
     console.log(user);
 
-  
+
 
     // user logout
     const handleLogout = () => {
@@ -46,7 +46,7 @@ const Header = () => {
                     </ul>
                 </div>
 
-               <Link><img className='h-14' src="https://i.ibb.co/CnHwkS5/logo-2.png" alt="" /></Link> 
+                <Link><img className='h-14' src="https://i.ibb.co/CnHwkS5/logo-2.png" alt="" /></Link>
 
                 <NavLink to="/" ><h1 className='text-4xl  font-extrabold tracking-wider'>TOY<span className='' >LAND</span></h1></NavLink>
 
