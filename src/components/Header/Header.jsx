@@ -40,6 +40,9 @@ const Header = () => {
                         <li> <NavLink to="/addtoy" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>ADD A TOY</span></NavLink>
                         </li>
 
+                        <li> <NavLink to="/toyCard" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>TOY COLLECTION</span></NavLink>
+                        </li>
+
                         <li><NavLink to="/blog" className={({ isActive }) => isActive ? "border-gray-900 border" : ""} ><span className=' font-bold '>BLOG</span></NavLink>
                         </li>
 
