@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FavToys = () => {
     return (
@@ -12,7 +13,9 @@ const FavToys = () => {
 
                     <div className=' h-full w-full'>
                         <h1 className='text-2xl text-bold text-center mb-4'>Sports Car</h1>
+                        <Link to='/toyCard'>
                         <img className='h-full w-full' src="https://i.ibb.co/KVsK5gD/photo-1536454891705-7f5a5c762d3a-ixlib-rb-4-0.jpg" alt="" />
+                        </Link>
                     </div>
 
 

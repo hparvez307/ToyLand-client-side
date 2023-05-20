@@ -1,43 +1,81 @@
 import React from 'react';
 import './Footer.css'
+import { Link } from 'react-router-dom';
+import { FaCarSide, FaLocationArrow, FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div className='   bg  mt-20 '>
+        <div className=' footer-container  bg  mt-20 '>
 
-<div className='flex flex-col lg:flex-row max-[600px]:text-center justify-between '>
+            <div className='flex pb-5 pt-16 px-8 flex-col lg:flex-row max-[600px]:text-center justify-between '>
 
-<div>
-    <h1 className='text-3xl font-bold tracking-wider '>Skychef</h1>
-    <p className='my-2'>Find your favorite food from our website. <br /> Eat Healthy, Live Healthy</p>
-</div>
+                <div>
 
-<div className='max-[600px]:mb-10'>
-    <h1 className='text-xl mb-3  font-bold '>Policies</h1>
-    <p>About Us</p>
-    <p>Terms & Conditions</p>
-    <p>Privacy Poclicy</p>
-    <p>Contact Us</p>
-</div>
+                    <div className='flex items-center'>
+                        <Link><img className='h-14 max-[571px]:pl-20' src="https://i.ibb.co/CnHwkS5/logo-2.png" alt="" /></Link>
 
+                        <Link to="/" ><h1 className='text-4xl  font-extrabold  tracking-wider'>TOY<span className='' >LAND</span></h1></Link>
+                    </div>
 
+                    <p className='my-4'>Find The best toy cars with reasonable  <br />price for kids from our website.</p>
 
+                    <p>Find us on social media:</p>
+                    <img className='mt-1 max-[571px]:pl-32' src="https://i.ibb.co/BG7QcdW/Group-9969.png" alt="" />
 
+                </div>
 
-<div>
-    <h1 className='text-xl mb-3 font-bold '>Contact</h1>
-    <p>Mohammadpur, Dhaka-1207, Bangladesh <br /> +8801748521745</p>
-</div>
+                {/* policies */}
+                <div className='max-[600px]:mb-10'>
+                    <h1 className='text-2xl my-3  font-bold '>Policies</h1>
+                    <p>ToyLand Privacy Policy</p>
+                    <p>Terms of Service</p>
+                    <p>Refund policy</p>
+                    <p>Payment policy</p>
 
-</div>
+                </div>
+                {/* important links */}
+                <div className='max-[600px]:mb-10'>
+                    <h1 className='text-2xl my-3  font-bold '>Important Links</h1>
+                    <p>About Us</p>
+                    <p>Blog</p>
+                    <p>Contact Us</p>
+                    <p>Shipping Method</p>
+                    <p>Order Tracking</p>
 
-<hr className='mt-5' />
+                </div>
 
-<div className=' pt-10'>
-<p> &copy;2023 Skychef. All Rights Reserved</p>
-</div>
+                {/* contact info */}
+                <div >
+                    <h1 className='text-2xl my-3 font-bold '>Contact Us</h1>
+                    <div className='flex max-[571px]:pl-14  gap-2'>
+                        <div className='text-2xl mt-2'>
+                            < FaMapMarkerAlt />
+                        </div>
+                        <p>H#05, RD#05, kaderabad housing, <br /> Mohammadpur, Dhaka-1207, Bangladesh </p>
+                    </div>
 
+                    <div className='flex max-[571px]:pl-14 my-4 gap-2'>
+                        <div className='text-2xl '>
+                            < FaRegEnvelope />
+                        </div>
+                        <p>hparvez307@gmail.com</p>
+                    </div>
 
+                    <div className='flex max-[571px]:pl-14 gap-2'>
+                        <div className='text-2xl mt-1'>
+                            < FaPhoneAlt />
+                        </div>
+                        <p>+8801838634389</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* divider */}
+            <div className="divider text-7xl text-gray-500"><FaCarSide /> </div>
+
+            <div className='pb-9 text-center pt-4'>
+                <p> <span className='text-bold'>&copy;</span> 2023 ToyLand. All Rights Reserved</p>
+            </div>
         </div>
     );
 };

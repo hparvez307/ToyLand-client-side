@@ -42,7 +42,7 @@ const SubCategoryCard = ({ toy }) => {
 
   return (
     <div data-aos="fade-up" className="card mx-auto  w-96 bg-base-100  shadow-inner shadow-rose-300">
-      <figure><img className='p-6 ' src={photo} alt="Shoes" /></figure>
+      <figure><img className='p-6 ' src={photo}  /></figure>
       <div className="card-body text-center">
         <h2 className="text-3xl text-bold ">  {name}</h2>
         <p><span className='text-bold '>price:</span>  ${price}</p>
