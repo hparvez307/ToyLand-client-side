@@ -4,44 +4,20 @@ import 'react-tabs/style/react-tabs.css';
 import SubCategoryCard from '../SubCategoryCard/SubCategoryCard';
 const CategoryTab = () => {
 
+    const [data, setData] = useState([]);
+    const [category, setCategory] = useState('police%20car')
 
-    const [policeCar, setPoliceCar] = useState([]);
-    const [truck, setTruck] = useState([]);
-    const [sportsCar, setSportsCar] = useState([]);
+    useEffect(() => {
+        fetch(`https://toy-land-server.vercel.app/toysByCategory?sub_category=${category}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setData(data);
+            })
+    }, [category])
 
 
 
-
-
-    useEffect(()=>{
-        fetch('https://toy-land-server.vercel.app/toysByCategory?sub_category=police%20car')
-        .then(res => res.json())
-        .then( data => {
-            console.log(data);
-            setPoliceCar(data);
-        })
-    },[])
-
-    useEffect(()=>{
-        fetch('https://toy-land-server.vercel.app/toysByCategory?sub_category=truck')
-        .then(res => res.json())
-        .then( data => {
-            console.log(data);
-            setTruck(data);
-        })
-    },[])
-
-    useEffect(()=>{
-        fetch('https://toy-land-server.vercel.app/toysByCategory?sub_category=sports%20car')
-        .then(res => res.json())
-        .then( data => {
-            console.log(data);
-            setSportsCar(data);
-        })
-    },[])
-    
-
-    
     return (
 
         <div >
@@ -52,9 +28,9 @@ const CategoryTab = () => {
                     <TabList  >
                         <div className='flex justify-center gap-24'>
 
-                            <Tab > <h1 className='text-2xl opacity-70   text-center font-bold '>Police Car</h1></Tab>
-                            <Tab > <h1 className='text-2xl opacity-70   text-center font-bold '>Truck</h1></Tab>
-                            <Tab > <h1 className='text-2xl opacity-70   text-center font-bold '>Sports Car</h1></Tab>
+                            <Tab > <h1 onClick={() => setCategory('police%20car')} className='text-2xl opacity-70   text-center font-bold '>Police Car</h1></Tab>
+                            <Tab > <h1 onClick={() => setCategory('truck')} className='text-2xl opacity-70   text-center font-bold '>Truck</h1></Tab>
+                            <Tab > <h1 onClick={() => setCategory('sports%20car')} className='text-2xl opacity-70   text-center font-bold '>Sports Car</h1></Tab>
 
 
                         </div>
@@ -75,7 +51,7 @@ const CategoryTab = () => {
 
 
                             {
-                                policeCar.slice(0,3).map((toy, index) => <SubCategoryCard key={index + 1} toy={toy}></SubCategoryCard>)
+                                data.slice(0, 3).map((toy, index) => <SubCategoryCard key={index + 1} toy={toy}></SubCategoryCard>)
                             }
 
                         </div>
@@ -91,7 +67,7 @@ const CategoryTab = () => {
 
 
                             {
-                                truck.slice(0,3).map((toy, index) => <SubCategoryCard key={index + 1} toy={toy}></SubCategoryCard>)
+                                data.slice(0, 3).map((toy, index) => <SubCategoryCard key={index + 1} toy={toy}></SubCategoryCard>)
                             }
 
                         </div>
@@ -108,7 +84,7 @@ const CategoryTab = () => {
 
 
                             {
-                                sportsCar.slice(0,3).map((toy, index) => <SubCategoryCard key={index + 1} toy={toy}></SubCategoryCard>)
+                                data.slice(0, 3).map((toy, index) => <SubCategoryCard key={index + 1} toy={toy}></SubCategoryCard>)
                             }
 
                         </div>
