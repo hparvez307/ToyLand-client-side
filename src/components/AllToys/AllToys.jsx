@@ -29,6 +29,9 @@ const AllToys = () => {
           console.log(data);
           setToys(data);
         }
+        else{
+          setToys([]);
+        }
       })
   }
 
